@@ -1,0 +1,150 @@
+/*nav*/
+.navbar {
+  width: 97%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+.title {
+  text-decoration: none;
+  color: black;
+  font-size: 35px;
+  font-family: "Irish Grover";
+}
+ul {
+  width: 15vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+li,
+.login {
+  text-decoration-line: none;
+  color: black;
+  font-size: 20px;
+  font-family: "Source Serif 4";
+}
+.login {
+  width: 15vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*상단*/
+.wrapper {
+  width: 50%;
+  height: 100%;
+  margin-left: 382px;
+}
+.contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/*상품등록화면*/
+.item_info_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+.item {
+  display: flex;
+  margin-top: 3%;
+}
+
+.centered-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: "Orbit-Regular";
+}
+.overflow_container {
+  width: 100vw;
+}
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.input {
+  width: 100%;
+  height: 30px;
+  border: 1px solid #000000;
+  border-radius: 8px;
+}
+input::placeholder {
+  font-size: 18px;
+  color: #888;
+}
+.input_introducion {
+  height: 300px;
+  width: 1000px;
+  border-radius: 20px;
+  font-size: 15px;
+  padding: 10px;
+  text-align: left;
+  resize: none;
+  line-height: normal;
+  overflow: auto;
+}
+input[type="radio"] {
+  display: none;
+}
+label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  height: 20px;
+  width: 200px;
+  padding: 10px 20px;
+  margin: 5px;
+  font-family: Orbit-Regular;
+  border-radius: 8px;
+  border: 1px solid #000000;
+}
+input[type="radio"]:checked + label {
+  border-radius: 8px;
+  border: 1px solid #000000;
+  background-color: #ffbce7;
+}
+.finish_button {
+  margin-top: 50px;
+  margin-left: 180px;
+  width: 200px;
+  height: 50px;
+  background-color: #f44d99;
+  border-radius: 20px;
+  font-size: 25px;
+  color: #ffffff;
+  font-family: Inknut Antiqua;
+  border: none;
+  margin-bottom: 40px;
+}
+
+/*footer*/
+.footer {
+  width: 100vw;
+  background-color: #ff53a5;
+  height: 15vh;
+}
+.footer-content {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
