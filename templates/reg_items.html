@@ -1,60 +1,247 @@
- {% extends "index.html" %}
- {% block section %}
-<form action="/submit_item_post" method="post" enctype="multipart/form-data">
- <div><br><br>
- <label for="name">Item name: </label>
- <input type="text" name="name" id="name" required><br><br>
- </div>
- <div>
- <label for="seller"> Seller ID: </label>
- <input type="text" name="seller" id="seller" required><br><br>
- </div>
- <div>
- <label for="addr"> Address: </label>
- <input type="text" name="addr" id="addr" required><br><br>
- </div>
- <div>
- <label for="tel">Email: </label>
- <input type="text" name="email" id="email" required><br><br>
- </div>
- <div>
- <label for="category">Category: </label>
- <br>
- <select id="category" name="category">
- <option value="Clothes" selected> Clothes </option>
- <option value="Beauty"> Beauty </option>
- <option value="Books"> Books </option>
- <option value="Furniture"> Furniture </option>
- <option value="Electronics"> Electronics </option>
- <option value="ETC"> ETC </option>
- </select><br><br>
- <div>
- <label for="card">Credit Card? (Y/N): </label>
- <br>
- <select id="card" name="card">
- <option value="Y" selected>Yes</option>
- <option value="N">No</option>
- </select><br><br>
- </div>
- <div>
- <label for="status">Status? </label>
- <br>
- <select id="status" name="status">
- <option value="new" selected>New</option>
- <option value="lnew">Likely New</option>
- <option value="used">Used</option>
- </select><br><br>
- </div>
- <div>
- <label for="phone">Phone : </label>
- <input type="text" name="phone" id="phone"><br><br>
- </div>
- <div>
-     <label for="img">Representative Image upload : </label>
-     <input type="file" name="file" /><br><br>
- </div>
- <input type="submit" value="Submit!"><br><br>
- </div>
- </form>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="../static/product_register/product_register.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preconnect"
+      href="https://fonts.google.com/specimen/Inknut+Antiqua"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Source+Serif+4:opsz@8..60&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <>
+    <nav class="navbar">
+      <div style="display: flex; flex-direction: row; align-items: center">
+        <a href="" class="title">Giboo & Take</a>
+        <ul class="navbar_menu">
+          <li>Giboo</li>
+          <li>Take</li>
+          <li>Charge</li>
+        </ul>
+      </div>
+      <div class="login">
+        <div>login</div>
+        <div>|</div>
+        <div>sign up</div>
+        <img
+          src="../static/icons/profile_img.png"
+          alt="profile"
+          style="width: 50px"
+        />
+      </div>
+    </nav>
+    <!--상단-->
+    
+    <div class="wrapper">
+      <div class="contents">
+        <img
+          src="../static/product_register/img_product_register/Wave.png"
+          alt="WAVE"
+          style="width: 100%"
+        />
+        <img
+          src="../static/product_register/img_product_register/Line.png"
+          alt="LINE"
+          style="width: 100%"
+        />
+      </div>
+      <!--상품등록화면-->
+     <form action="/submit_item_post" method="post" enctype="multipart/form-data">
+      <div class="title">
+        <img
+          src="../static/product_register/img_product_register/title.png"
+          style="width: 180px; height: 50px"
+        />
+      </div>
+      <div class="item_info_container">
+        <div style="width: 35%">
+          <img
+            src="../static/product_register/img_product_register/item_box_register.png"
+            alt="ITEM_BOX"
+            style="width: 100%"
+          />
+          <label for="img" style="display: none"></label>
+          <input type="file" name="file" />
+          <div style="margin-left: 15px">
+            <span>
+              <img
+                src="../static/product_register/img_product_register/mini_itemphoto.png"
+                alt="ITEM_INFO_TAG"
+                style="width: 45%"
+              />
+            </span>
+            <img
+              src="../static/product_register/img_product_register/mini_itemphoto.png"
+              alt="ITEM_INFO_TAG"
+              style="width: 45%"
+            />
+          </div>
+          <div style="margin-left: 15px">
+            <span>
+              <img
+                src="../static/product_register/img_product_register/mini_itemphoto.png"
+                alt="ITEM_INFO_TAG"
+                style="width: 45%"
+              />
+            </span>
+            <img
+              src="../static/product_register/img_product_register/mini_itemphoto.png"
+              alt="ITEM_INFO_TAG"
+              style="width: 45%"
+            />
+          </div>
+        </div>
+        <div class="item_input_container" style="width: 65%">
+          <!--상품명-->
+          <div class="item">
+            <div class="image-container">
+              <img
+                src="../static/product_register/img_product_register/item_info_tag.png"
+                alt="ITEM_INFO_TAG"
+                width="200px"
+              />
+              <div class="centered-text" style="font-size: 18px">상품명</div>
+            </div>
+          </div>
+          <div class="item">
+            <input
+              type="text"
+              class="input"
+              id="item_name"
+              name="item_name"
+              placeholder="   상품 이름을 입력하세요."
+            />
+          </div>
+          <!--상품가격-->
+          <div class="item">
+            <div class="image-container">
+              <img
+                src="../static/product_register/img_product_register/item_info_tag.png"
+                alt="ITEM_INFO_TAG"
+                width="200px"
+              />
+              <div class="centered-text" style="font-size: 18px">상품가격</div>
+            </div>
+          </div>
+          <div class="item">
+            <input
+              type="number"
+              class="input"
+              id="item_price"
+              name="item_price"
+              placeholder="   가격을 입력하세요."
+            />
+          </div>
+          <!--거래방식-->
+          <div class="item">
+            <div class="image-container">
+              <img
+                src="../static/product_register/img_product_register/item_info_tag.png"
+                alt="ITEM_INFO_TAG"
+                width="200px"
+              />
+              <div class="centered-text" style="font-size: 18px">거래방식</div>
+            </div>
+          </div>
+          <div class="item">
+            <input type="radio" id="delivery" name="trade" value="direct" />
+            <label for="delivery">택배</label>
+            <input type="radio" id="direct" name="trade" value="delivery" />
+            <label for="direct">직거래</label>
+          </div>
+          <!--상품 상태-->
+          <div class="item">
+            <div class="image-container">
+              <img
+                src="../static/product_register/img_product_register/item_info_tag.png"
+                alt="ITEM_INFO_TAG"
+                width="200px"
+              />
+              <div class="centered-text" style="font-size: 18px">상품 상태</div>
+            </div>
+          </div>
+          <div class="item">
+            <input type="radio" id="super" name="condition" value="super" />
+            <label for="super">최상</label>
+            <input type="radio" id="good" name="condition" value="good" />
+            <label for="good">상</label>
+            <input type="radio" id="soso" name="condition" value="soso" />
+            <label for="soso">중</label>
+            <input type="radio" id="bad" name="condition" value="bad" />
+            <label for="bad">하</label>
+          </div>
 
- {% endblock %}
+          <!--상세설명-->
+          <div class="item">
+            <div class="image-container">
+              <img
+                src="../static/product_register/img_product_register/item_info_tag.png"
+                alt="ITEM_INFO_TAG"
+                width="200px"
+              />
+              <div class="centered-text" style="font-size: 18px">상세설명</div>
+            </div>
+          </div>
+
+          <div class="item">
+            <textarea
+              type="text"
+              class="input_introducion"
+              id="item_detail"
+              name="item_detail"
+              placeholder="상품 상태: ex. 기스가 약간 있어요,사용감 전혀 없어요."
+            ></textarea>
+          </div>
+
+          <!--경매기간-->
+          <div class="item">
+            <div class="image-container">
+              <img
+                src="../static/product_register/img_product_register/item_info_tag.png"
+                alt="ITEM_INFO_TAG"
+                width="200px"
+              />
+              <div class="centered-text" style="font-size: 18px">경매기간</div>
+            </div>
+          </div>
+          <div class="item">
+            <input type="radio" id="1" name="auction" value="1"/>
+            <label for="1">1일</label>
+
+            <input type="radio" id="3" name="auction" value="3"/>
+            <label for="3">3일</label>
+
+            <input type="radio" id="5" name="auction" value=5/>
+            <label for="5">5일</label>
+
+            <input type="radio" id="7" name="auction" value="7"/>
+            <label for="7">7일</label>
+          </div>
+
+            <input type="submit" value="Finish" class="finish_button" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--푸터-->
+    <div class="footer">
+      <div>
+        <div class="footer-content">
+          Giboo&Take<br />Copyrightⓒ 2023 by 오소몰 all rights reserved
+        </div>
+        <!--인스타그램 깃허브 아이콘 연결-->
+      </div>
+    </div>
+  </body>
+</html>

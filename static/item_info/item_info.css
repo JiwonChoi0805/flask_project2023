@@ -1,0 +1,157 @@
+.navbar {
+  width: 97%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+.title {
+  text-decoration: none;
+  color: black;
+  font-size: 35px;
+  font-family: "Irish Grover";
+}
+ul {
+  width: 15vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+li,
+.login {
+  text-decoration-line: none;
+  color: black;
+  font-size: 20px;
+  font-family: "Source Serif 4";
+}
+.login {
+  width: 15vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fafafa;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 40%;
+  margin-left: 30%;
+  background-color: #ffe4f6;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.footer {
+  background-color: #ff53a5;
+  height: 15vh;
+}
+.footer-content {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+.box1 {
+  display: flex;
+  width: 12vw;
+  height: 300px;
+  background-color: #d5d5d5;
+  border: 15px solid white;
+}
+.itemContainer {
+  display: flex;
+  flex-direction: row;
+}
+.itemInfo {
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+}
+.row {
+  display: flex;
+  flex-direction: flow;
+}
+.line {
+  width: 90%;
+  border-top: 2px solid #b9b9b9;
+}
+.infoBox {
+  text-align: center;
+  display: flex;
+  margin: 1%;
+  width: 100px;
+  background-color: #dc9dcd;
+  border: 1px solid black;
+  border-radius: 20%/20%;
+}
+.box2 {
+  display: flex;
+  width: 5vw;
+  height: 100px;
+  background-color: #d5d5d5;
+  border: 10px solid white;
+}
+.up {
+  transform: rotate(315deg);
+  position: relative;
+  top: 50px;
+  width: 10%;
+}
+.down {
+  transform: rotate(315deg);
+  position: relative;
+  left: 20%;
+  top: 360px;
+  width: 10%;
+}
+
+.auction {
+  width: 25%;
+  height: 30px;
+  position: relative;
+  left: 43%;
+  bottom: 132px;
+  border: 1px solid black;
+  border-radius: 10%/10%;
+}
+.like {
+  border: 1px solid black;
+  width: 25%;
+  height: 28.5px;
+  position: relative;
+  left: 70%;
+  bottom: 162px;
+  border-radius: 10%/10%;
+  background-color: #f0f0f0;
+  text-align: center;
+  line-height: 2.4;
+}
+
+#likee {
+  fill: #ddd;
+}
+#likee.active {
+  fill: red;
+}
+.whiteBox {
+  width: 60%;
+  height: 130px;
+  border-radius: 10%/10%;
+  background-color: white;
+  position: relative;
+  bottom: 98px;
+  left: 38.5%;
+  font-size: 25px;
+}

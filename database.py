@@ -10,18 +10,16 @@ class DBhandler:
         self.db=firebase.database()
         
         
-    def insert_item(self, name, data, img_path):
+    def insert_item(self, item_name, data, img_path):
         item_info ={
-            "seller": data['seller'],
-            "addr": data['addr'],
-            "email": data['email'],
-            "category": data['category'],
-            "card": data['card'],
-            "status": data['status'],
-            "phone": data['phone'],
+            "item_name": data['item_name'],
+            "item_price": data['item_price'],
+            "trade": data['trade'],
+            "condition": data['condition'],
+            "auction": data['auction'],
             "img_path": img_path
         }
-        self.db.child("item").child(name).set(item_info)
+        self.db.child("item").child(item_name).set(item_info)
         print(data,img_path)
         return True
     
