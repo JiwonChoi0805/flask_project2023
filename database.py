@@ -2,6 +2,7 @@ import pyrebase
 import json
 
 class DBhandler:
+<<<<<<< HEAD
     def __init__(self):
         with open('./authentication/firebase_auth.json') as f:
             config=json.load(f)
@@ -24,6 +25,29 @@ class DBhandler:
         return True
     
     
+=======
+    def __init__(self ):
+        with open('./authentication/firebase_auth.json') as f:
+            config=json.load(f )
+
+            firebase = pyrebase.initialize_app(config)
+            self.db = firebase.database()
+            
+    def insert_item(self, name, data, img_path):
+        item_info ={
+            "seller": data['seller'],"addr": data['addr'],
+            "email": data['email'],
+            "category": data['category'],
+            "card": data['card'],
+            "status": data['status'],
+            "phone": data['phone'],
+            "img_path": img_path
+        }
+        self.db.child("item").child(name).set(item_info)
+        print(data,img_path)
+        return True
+    
+>>>>>>> 429938b30bf184b93e9730f5ba4aa5d949bea588
     def insert_user(self, data, pw):
         user_info ={
             "id": data['id'],
@@ -36,7 +60,10 @@ class DBhandler:
             return True
         else:
             return False
+<<<<<<< HEAD
 
+=======
+>>>>>>> 429938b30bf184b93e9730f5ba4aa5d949bea588
         
     def user_duplicate_check(self, id_string):
         users = self.db.child("user").get()
@@ -50,4 +77,31 @@ class DBhandler:
                 
                 if value['id'] == id_string:
                     return False
+<<<<<<< HEAD
             return True
+=======
+                return True
+            
+    def find_user(self, id_, pw_):
+        users = self.db.child("user").get()
+        target_value=[]
+        for res in users.each():
+            value = res.val()
+            
+            if value['id'] == id_ and value['pw'] == pw_:
+                return True
+            return False
+    def get_items(self):
+        items=self.db.child("item").get().val()
+        return items
+    
+    def get_item_byname(self, name):
+        items = self.db.child("item").get()
+        target_value=""
+        print("###########",name)
+        for res in items.each():
+            key_value = res.key()
+            if key_value == name:
+                target_value=res.val()
+                return target_value
+>>>>>>> 429938b30bf184b93e9730f5ba4aa5d949bea588

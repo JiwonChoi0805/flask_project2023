@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -162,3 +163,39 @@ function openModal(imageSrc, altText) {
 
 </body>
 </html>
+=======
+ {% extends "index.html" %}
+ {% block section %}
+<p>
+ Seller {{data.seller}} sells {{data.name}} and its c
+ ategory is {{data.category}}.
+ 
+The item is 
+{% if data['status'] == "lnew" %}
+ likely new!
+ {% endif %}
+ {% if data['status'] == "new" %}
+ new!
+ {% endif %}
+ {% if data['status'] == "used" %}
+ used!
+ {% endif %}
+ </p>
+<img src="{{img_path}}"/>
+<p>
+ Contact via {{data.email}} or {{data.phone}} 
+if you are interested!
+ The address is {{data.addr}}
+ </p>
+ <p>
+ For payment, the credit card is 
+{% if data['card'] == "Y" %}
+ accepted!
+ {% endif %}
+ {% if data['card'] == "N" %}
+ NOT accepted!
+ {% endif %}
+ </p>
+
+ {% endblock %}
+>>>>>>> 429938b30bf184b93e9730f5ba4aa5d949bea588

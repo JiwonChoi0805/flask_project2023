@@ -10,6 +10,7 @@
 <body>
     <nav class="navbar">
         <div class="navbar__logo">
+<<<<<<< HEAD
             
             <a href="">EwhaMarket</a>
         </div>
@@ -19,6 +20,22 @@
             <li><a href="/review">Review</a></li>
             <li><a href="/reg_items">Register Items</a></li>
             <li><a href="/reg_reviews">Register Reviews</a></li>
+=======
+
+            <a href="">EwhaMarket</a>
+        </div>
+        <ul class="navbar__menu">
+            {% if session['id'] %}
+            <li><a href="/logout"><b>{{session['id']}}님 반갑습니다!</b> logout</a></li>
+            {% else %}
+            <li><a href="/login">login</a></li>
+            {% endif %}
+        
+            <li><a href="/list">List</a></li>
+            <li><a href="/review">Review</a></li>
+            <li><a href="/reg_items">Register Items</a></li>
+            <li><a href="/reg_review">Register Reviews</a></li>
+>>>>>>> 429938b30bf184b93e9730f5ba4aa5d949bea588
         </ul>
         <a href="#" class="navbar__toogleBtn">
             <i class="fas fa-bars"></i>
@@ -29,5 +46,9 @@
         
         {% endblock section %}
     </section>
+<<<<<<< HEAD
 </body>
+=======
+    </body>
+>>>>>>> 429938b30bf184b93e9730f5ba4aa5d949bea588
 </html>
